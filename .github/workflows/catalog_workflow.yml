@@ -1,4 +1,4 @@
-name: Satellite Catalog CI
+name: catalog user CI
 
 # Controls when the action will run. 
 on:
@@ -29,11 +29,9 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: pererakwe/catalog-mysql
+          repository: pererakwe/catalog-user
           tag_with_ref: true
       
-      - 
-        name: Test digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
+      
 
 
