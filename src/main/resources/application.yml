@@ -1,0 +1,17 @@
+server:
+  port: 8089
+
+spring:
+  datasource:
+    username: SpaceX
+    password: SpaceXstarlink
+    url: jdbc:mysql://satellitedb.cqfy4qmy6ok3.us-west-1.rds.amazonaws.com/catalogdb
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
