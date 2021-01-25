@@ -2,7 +2,7 @@ package com.satellite_api_master.satellite_catalog.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "satellite_catalog",catalog = "catalogdb")
+@Table(name = "satellite_catalog",catalog = "satellitedb")
 public class Catalog {
 
     @Id
