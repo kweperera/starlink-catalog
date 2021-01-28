@@ -9,7 +9,7 @@ RUN mvn -f /usr/src/app/pom.xml clean package
 # Package stage
 #
 FROM openjdk:8
-COPY --from=build /usr/src/app/target/*.jar /usr/local/lib/catalog-user.jar
+COPY --from=build /usr/src/app/target/catalog-user.jar /usr/local/lib/catalog-user.jar
 EXPOSE 8089
 ENTRYPOINT ["java","-jar","/usr/local/lib/catalog-user.jar"]
 
