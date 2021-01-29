@@ -20,7 +20,7 @@ spec:
         app.kubernetes.io/name: catalog-app
     spec:
       containers:
-      - image: pererakwe/catalog-user:main
+      - image: 262662597151.dkr.ecr.us-west-1.amazonaws.com/catalog-user:latest
         imagePullPolicy: Always
         name: catalog-app
         ports:
