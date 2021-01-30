@@ -33,8 +33,8 @@ public class HomeController {
         return  catalogImplementation.findAllCatalog();
     }
 
-    @GetMapping(value = "getSatelliteData/{id}")
-    public Catalog getSatelliteData(@PathVariable ("id") Long id){
+    @GetMapping(value = "getCatalogData/{id}")
+    public Catalog getCatalogData(@PathVariable ("id") Long id){
         Optional<Catalog> dataRow = catalogImplementation.getCatalogData(id);
         if(dataRow.isPresent()){
             return dataRow.get();
