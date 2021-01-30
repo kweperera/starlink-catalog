@@ -42,11 +42,6 @@ public class CatalogImplementation implements CatalogInterface {
     }
 
     @Override
-    public Optional<Catalog> getCatalogData(long id) {
-        return (Optional<Catalog>) catalogRepo.findById(id);
-    }
-
-    @Override
     public void deleteCatalog(long id) {
         // To delete catalog
         catalogRepo.deleteById(id);
