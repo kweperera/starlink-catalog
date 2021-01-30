@@ -20,7 +20,7 @@ spec:
         app.kubernetes.io/name: catalog-app
     spec:
       containers:
-      - image: pererakwe/catalog-user:tagname
+      - image: pererakwe/catalog-user:main
         imagePullPolicy: Always
         name: catalog-app
         ports:
