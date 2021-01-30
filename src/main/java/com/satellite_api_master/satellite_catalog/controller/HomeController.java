@@ -33,6 +33,15 @@ public class HomeController {
         return  catalogImplementation.findAllCatalog();
     }
 
+    // Find catalog by id
+    @GetMapping(value = "getCatalogData/{id}")
+    public Catalog getCatalogData(@PathVariable ("id") Long id){
+        Optional<Catalog> dataRow = catalogImplementation.getCatalogData(id);
+        if(dataRow.isPresent()){
+            return dataRow.get();
+        }
+        return null;
+    }
 
     // Update catalog
     @PutMapping("updateCatalog")

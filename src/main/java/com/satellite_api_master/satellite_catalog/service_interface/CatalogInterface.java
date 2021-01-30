@@ -15,6 +15,9 @@ public interface CatalogInterface {
     // To fetch all catalog from database
     public List<Catalog> findAllCatalog();
 
+    // To get catalog by id
+    public Optional<Catalog> getCatalogData(long id);
+
     // To delete catalog
     public void deleteCatalog(long id);
 }
