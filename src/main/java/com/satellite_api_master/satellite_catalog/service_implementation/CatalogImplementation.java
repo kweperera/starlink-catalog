@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CatalogImplementation implements CatalogInterface {
@@ -38,6 +39,11 @@ public class CatalogImplementation implements CatalogInterface {
     public List<Catalog> findAllCatalog() {
         // It returns a list so casting is needed
         return (List<Catalog>) catalogRepo.findAll();
+    }
+
+    @Override
+    public Optional<Catalog> getCatalogData(long id) {
+        return (Optional<Catalog>) catalogRepo.findById(id);
     }
 
     @Override

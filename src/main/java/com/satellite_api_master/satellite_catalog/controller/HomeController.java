@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 // Postman is used to do operations
@@ -30,6 +31,15 @@ public class HomeController {
     @GetMapping(value = "getAllCatalog")
     public List<Catalog> findAllCatalog(){
         return  catalogImplementation.findAllCatalog();
+    }
+
+    @GetMapping(value = "getSatelliteData/{id}")
+    public Catalog getSatelliteData(@PathVariable ("id") Long id){
+        Optional<Catalog> dataRow = catalogImplementation.getCatalogData(id);
+        if(dataRow.isPresent()){
+            return dataRow.get();
+        }
+        return null;
     }
 
     // Update catalog
